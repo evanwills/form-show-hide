@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Squiz Matrix Custom Form Bootstrap HTML generator</title>
+		<script type="text/ecmascript" src="js/jquery_2-2-4.min.js"></script>
+		<link rel="stylesheet" href="css/matrix_form_HTML_generator.css" />
+	</head>
+	<body>
+		<h1>Squiz Matrix Custom Form Bootstrap HTML generator</h1>
+		<form id="generator">
+			<fieldset id="fieldsWrap">
+				<legend>Sections and questions</legend>
+				<div id="fields">
+				</div>
+				<p><button id="submit" class="btn">Generate</button></p>
+			</fieldset>
+		</form>
+		<input type="checkbox" id="modal" />
+		<label for="modal" class="btn">Helpful stuff</label>
+		<!-- <div class="modal-wrap"> -->
+			<section class="modal-content">
+				<header>
+					<h1>Extra stuff to help with matrix custom forms</h1>
+				</header>
+				<input type="radio" name="accordion" id="close0" />
+				<ul class="accordion">
+					<!-- <li>
+						<input type="radio" name="accordion" id="config" />
+						<label for="config" class="btn">Field config info</label>
+						<article>
+							<header><h1>Field config info</h1></header>
+						</article>
+					</li> -->
+					<li>
+						<input type="radio" name="accordion" id="keywords" />
+						<label for="keywords" class="btn">Matrix keywords</label>
+						<article>
+							<header><h1 id="keywords--head">Matrix keywords for default values</h1></header>
+							
+							<h2>Staff specific keywords</h2>
+							<dl class="table-def ldap">
+								<dt>First Name</dt>
+									<dd>%globals_user_attribute_first_name%</dd>
+
+								<dt>Common name usually same as (display name)</dt>
+									<dd>%globals_user_attribute_cn%</dd>
+
+								<dt>Last Name</dt>
+									<dd>%globals_user_attribute_last_name%</dd>
+									<dd>%globals_user_attribute_sn%</dd>
+
+								<dt>First Name+ Last Name</dt>
+									<dd>%globals_user_attribute_displayname%</dd>
+
+								<dt>User logon</dt>
+									<dd>%globals_user_attribute_samaccountname%</dd>
+
+								<dt>Campus</dt>
+									<dd>%globals_user_attribute_company%</dd>
+
+								<dt>Email</dt>
+									<dd>%globals_user_attribute_email%</dd>
+								
+								<dt>Job title</dt>
+									<dd>%globals_user_attribute_title%</dd>
+
+								<dt>Org Unit</dt>
+									<dd>%globals_user_attribute_department%</dd>
+
+								<dt>Extension number</dt>
+									<dd>%globals_user_attribute_telephonenumber%</dd>
+
+								<dt>Full Number (Prefix+Ext)</dt>
+									<dd>%globals_user_attribute_ipphone%</dd>
+
+								<dt>Fax number (in Full inc. Area code)</dt>
+									<dd>%globals_user_attribute_facsimiletelephonenumber%</dd>
+
+								<dt>Department</dt>
+									<dd>%globals_user_attribute_department%</dd>
+
+								<dt>Division (Org Unit)</dt>
+									<dd>%globals_user_attribute_division%</dd>
+
+								<dt>Hidden, values are either 1-CG (Casual general) 2-CA (Casual Academic) 3-Full time 4- Part time</dt>
+									<dd>%globals_user_attribute_street%</dd>
+
+								<dt>Hidden, values are either 1-General 2-Academic</dt>
+									<dd>%globals_user_attribute_employeetype%</dd>
+							</dl>
+							
+							<h2>Staff specific keywords</h2>
+							<dl class="table-def ldap">
+								<dt>First Name</dt>
+									<dd>%globals_user_attribute_first_name%</dd>
+									<dd>%globals_user_attribute_givenname%</dd>
+
+								<dt>Last Name</dt>
+									<dd>%globals_user_attribute_sn%</dd>
+
+								<dt>First Name+ Last Name</dt>
+									<dd>%globals_user_attribute_displayname%</dd>
+
+								<dt>User logon</dt>
+									<dd>%globals_user_attribute_samaccountname%</dd>
+									<dd>%globals_user_attribute_cn%</dd>
+									<dd>%globals_user_attribute_name%</dd>
+									<dd>%globals_user_attribute_samaccountname%</dd>
+
+								<dt>Course type</dt>
+									<dd>%globals_user_attribute_company%</dd>
+
+								<dt>Email</dt>
+									<dd>%globals_user_attribute_email%</dd>
+									<dd>%globals_user_attribute_userprincipalname%</dd>
+
+								<dt>description (Campus)</dt>
+									<dd>%globals_user_attribute_description%</dd>
+							</dl>
+							<label for="close0" class="close close0 close-top">close</label>
+							<label for="close0" class="close close0 close-bottom">close</label>
+						</article>
+					</li>
+					<!--<li>
+						<input type="radio" name="accordion" id="classes" />
+						<label for="classes" class="btn">Form classes</label>
+						<article>
+							<header><h1>Bootstrap &amp; ACU helper classes for forms</h1></header>
+						</article>
+					</li>-->
+					<li>
+						<input type="radio" name="accordion" id="html" />
+						<label for="html" class="btn">Hard coded HTML</label>
+						<article>
+							<header id="html--head"><h1>Hard coded HTML</h1></header>
+							<dl>
+								<dt>Campus (for staff only)</dt>
+									<dd>%globals_user_attribute_company%</dd>
+
+									<dd class="code"><!--
+										--><pre class="hl"><!--
+											--><span class="el">&lt;select</span> <span class="at">id="</span><span class="va">q<span class="review">xxxxx</span>_q<span class="review">y</span></span><span class="at">"</span> <span class="at">class="</span><span class="va">input_required</span><span class="at">"</span> <span class="at">tabindex="</span><span class="va"><span class="review">z</span></span><span class="at">"</span> <span class="at">name="</span><span class="va">q<span class="review">xxxxx</span>:q<span class="review">y</span></span><span class="at">"</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va"></span><span class="at">"</span><span class="el">&gt;</span>&amp;nbsp;<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va">Adelaide</span><span class="at">"</span>%globals_user_attribute_company^eq:Adelaide: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%<span class="el">&gt;</span>Adelaide<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va">Brisbane</span><span class="at">"</span>%globals_user_attribute_company^eq:Brisbane: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%<span class="el">&gt;</span>Brisbane<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va">Ballarat</span><span class="at">"</span>%globals_user_attribute_company^eq:Ballarat: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%<span class="el">&gt;</span>Ballarat<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va">Canberra</span><span class="at">"</span>%globals_user_attribute_company^eq:Canberra: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%<span class="el">&gt;</span>Canberra<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va">Melbourne</span><span class="at">"</span>%globals_user_attribute_company^eq:Melbourne: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%<span class="el">&gt;</span>Melbourne<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va">North Sydney</span><span class="at">"</span>%globals_user_attribute_company^eq:North Sydney: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%<span class="el">&gt;</span>North Sydney<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va">Strathfield</span><span class="at">"</span>%globals_user_attribute_company^eq:Strathfield: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%<span class="el">&gt;</span>Strathfield<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											--><span class="el">&lt;/select</span><span class="el">&gt;</span><!--
+										--></pre><!--
+									--></dd>
+
+					
+
+								<dt>Campus (for staff &amp; Students)</dt>
+									<dd class="code"><!--
+										--><pre class="hl"><!--
+											--><span class="el">&lt;select</span> <span class="at">id="</span><span class="va">q<span class="review">xxxxx</span>_q<span class="review">y</span></span><span class="at">"</span> <span class="at">class="</span><span class="va">input_required</span><span class="at">"</span> <span class="at">tabindex="</span><span class="va"><span class="review">z</span></span><span class="at">"</span> <span class="at">name="</span><span class="va">q<span class="review">xxxxx</span>:q<span class="review">y</span></span><span class="at">"</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va"></span><span class="at">"</span><span class="el">&gt;</span>&amp;nbsp;<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va">Adelaide</span><span class="at">"</span>%globals_user_attribute_company^eq:Adelaide: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%%globals_user_attribute_description^eq:adelaide: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%<span class="el">&gt;</span>Adelaide<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va">Ballarat</span><span class="at">"</span>%globals_user_attribute_company^eq:Ballarat: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%%globals_user_attribute_description^eq:aquinas: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%<span class="el">&gt;</span>Ballarat<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va">Brisbane</span><span class="at">"</span>%globals_user_attribute_company^eq:Brisbane: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%%globals_user_attribute_description^eq:mcauley: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%<span class="el">&gt;</span>Brisbane<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va">Canberra</span><span class="at">"</span>%globals_user_attribute_company^eq:Canberra: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%%globals_user_attribute_description^eq:signadou: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%<span class="el">&gt;</span>Canberra<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va">Melbourne</span><span class="at">"</span>%globals_user_attribute_company^eq:Melbourne: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%%globals_user_attribute_description^eq:patricks: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%<span class="el">&gt;</span>Melbourne<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va">North Sydney</span><span class="at">"</span>%globals_user_attribute_company^eq:North Sydney: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%%globals_user_attribute_description^eq:mackillop: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%<span class="el">&gt;</span>North Sydney<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va">Strathfield</span><span class="at">"</span>%globals_user_attribute_company^eq:Strathfield: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%%globals_user_attribute_description^eq:mary: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%<span class="el">&gt;</span>Strathfield<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											--><span class="el">&lt;/select</span><span class="el">&gt;</span><!--
+											--></pre><!--
+											--></dd>
+
+								<dt>Campus (Students only)</dt>
+									<dd>%globals_user_attribute_description%</dd>
+									<dd class="code"><!--
+										--><pre class="hl"><!--
+											--><span class="el">&lt;select</span> <span class="at">id="</span><span class="va">q<span class="review">xxxxx</span>_q<span class="review">y</span></span><span class="at">"</span> <span class="at">class="</span><span class="va">input_required</span><span class="at">"</span> <span class="at">tabindex="</span><span class="va"><span class="review">z</span></span><span class="at">"</span> <span class="at">name="</span><span class="va">q<span class="review">xxxxx</span>:q<span class="review">y</span></span><span class="at">"</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va"></span><span class="at">"</span><span class="el">&gt;</span>&amp;nbsp;<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va">Adelaide</span><span class="at">"</span>%globals_user_attribute_description^eq:adelaide: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%<span class="el">&gt;</span>Adelaide<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va">Ballarat</span><span class="at">"</span>%globals_user_attribute_description^eq:aquinas: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%<span class="el">&gt;</span>Ballarat<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va">Brisbane</span><span class="at">"</span>%globals_user_attribute_description^eq:mcauley: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%<span class="el">&gt;</span>Brisbane<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va">Canberra</span><span class="at">"</span>%globals_user_attribute_description^eq:signadou: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%<span class="el">&gt;</span>Canberra<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va">Melbourne</span><span class="at">"</span>%globals_user_attribute_description^eq:patricks: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%<span class="el">&gt;</span>Melbourne<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va">North Sydney</span><span class="at">"</span>%globals_user_attribute_description^eq:mackillop: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%<span class="el">&gt;</span>North Sydney<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											-->	<span class="el">&lt;option</span> <span class="at">value="</span><span class="va">Strathfield</span><span class="at">"</span>%globals_user_attribute_description^eq:mary: <span class="at">selected='</span><span class="va">selected</span><span class="at">'</span>%<span class="el">&gt;</span>Strathfield<span class="el">&lt;/option</span><span class="el">&gt;</span><br /><!--
+											--><span class="el">&lt;/select</span><span class="el">&gt;</span><!--
+										--></pre>
+									</dd>
+								<!--
+								<dt>Making dates inline</dt>
+									<dd></dd>
+								
+								<dt>Making radio buttons sit in columns</dt>
+									<dd></dd>
+								-->
+							</dl>
+							<label for="close0" class="close close0 close-top">close</label>
+							<label for="close0" class="close close0 close-bottom">close</label>
+						</article>
+					</li>
+					<li>
+						<input type="radio" name="accordion" id="showHide" />
+						<label for="showHide" class="btn">Show/Hide blocks</label>
+						<section>
+							<header><h1 id="showHide--head">Show/Hide blocks based on question answers</h1></header>
+
+							<!-- <h2>Things to be aware of</h2> -->
+
+							<p><strong>Be aware</strong> show/hide by functionality may not behave predictably if you have multiple fields controlling the visibility of the same block of HTML.<br />
+								It may be that with testing, you can be sure it will do what you want but you <em>really</em> will need to test it.</p>
+
+							<input type="radio" name="accordionShowHide" id="close1" />
+
+							<input type="radio" name="accordionShowHide" id="showHideBySelect" />
+							<label for="showHideBySelect" class="btn">Show/Hide by select (or radio button)</label>
+							<article>
+
+
+								<h2 id="showHideBySelect--head">Show/Hide by select (or radio button)</h2>
+
+								<p>Use a select question as the control/toggle to show or hide another (single) part of the page.</p>
+
+								<p><strong>NOTE:</strong> If you need to show/hide multiple blocks with multiple values single select field (or group of radio buttons), use <label for="showHideByMultiSelect" class="anchor-link-label">Show/Hide multiple blocks by select (or radio button)</label> instead.</p>
+
+								<p class="code"><!--
+									--><pre class="hl"><!--
+										--><span class="el">showHideBySelect(</span><span class="at">srcFieldID</span>, <span class="at">destID</span>, <span class="at">showVal</span>, <span class="at">hideVal</span>, <span class="at">makeRequired</span>, <span class="at">focusID</span><span class="el">);</span><br /><!--
+										--><span class="el">showHideByRadio(</span><span class="at">srcParentID</span>, <span class="at">destID</span>, <span class="at">showVal</span>, <span class="at">hideVal</span>, <span class="at">makeRequired</span>, <span class="at">focusID</span><span class="el">);</span><!--
+									--></pre><!--
+								--></p>
+
+								<h3>Parameter:</h3>
+								<dl>
+									<dt>srcFieldID (select only)</dt>
+										<dd>
+											ID of the select field to use as toggle. Or the <code>name</code> attribute of a group of radio buttons<br />
+											<strong>Note:</strong> an ID/name attribute must be prefixed with the hash character ("<strong>#</strong>")
+										</dd>
+										<dd>
+											e.g. select field with the ID '<strong><code>#q461746_q8</code></strong>'
+											<span class="code"><!--
+												--><pre class="hl"><!--
+													--><span class="el">showHideBySelect(</span><strong><span class="at">'#q461746_q8</span></strong>', <span class="at">'#outer_461746_q30'</span>, <span class="at">'1'</span><span class="el">);</span><!--
+												--></pre><!--
+											--></span>
+										</dd>
+									<dt>srcParentID (radio button only)</dt>
+										<dd>
+											ID of the wrapper for the radio button fields to use as toggle<br />
+											<strong>Note:</strong> an ID/name attribute must be prefixed with the hash character ("<strong>#</strong>")
+										</dd>
+										<dd>
+											e.g. select field with the ID '<strong><code>#q461746_q8</code></strong>' or a radio field with the name attribute '<strong><code>#outer_q461746_q8</code></strong>'
+											<span class="code"><!--
+												--><pre class="hl"><!--
+													--><span class="el">showHideByRadio(</span><strong><span class="at">'#outer_q461746_q8'</span></strong>, <span class="at">'#outer_461746_q30'</span>, <span class="at">'1'</span><span class="el">);</span><!--
+												--></pre><!--
+											--></span>
+										</dd>
+
+									<dt>destID</dt>
+										<dd>
+											ID of the block of HTML that is to be shown/hidden.<br />
+											<strong>Note:</strong> an ID must be prefixed with the hash character ("<strong>#</strong>")
+										</dd>
+										<dd>
+											e.g. the HTML block whose wrapper has the ID: <strong><code>#outer_461746_q30</code></strong>
+											<span class="code"><!--
+												--><pre class="hl"><!--
+													--><span class="el">showHideBySelect(</span><span class="at">'#q461746_q8'</span>, <strong><span class="at">'#outer_461746_q30'</span></strong>, <span class="at">'1'</span><span class="el">);</span><br /><!--
+													--><span class="el">showHideByRadio(</span><span class="at">'input[name=q461746_q8]'</span>, <strong><span class="at">'#outer_461746_q30'</span></strong>, <span class="at">'1'</span><span class="el">);</span><!--
+												--></pre><!--
+											--></span>
+										</dd>
+										
+									<dt>showVal</dt>
+										<dd>
+											the string value (or array/comma separated list of string values) to be matched to make HTML block <em>visible</em>.<br />
+											(If FALSE, then visibility is toggled <em>on</em> by default)<br />
+											<strong>Note:</strong> each value must exactly match the value of an option in the select box.
+										</dd>
+										<dd>
+											e.g. show the block '#outer_461746_q30' only if the field '#q461746_q8_1' as the option with the value <code>'1'</code> selected
+											<span class="code"><!--
+												--><pre class="hl"><!--
+													--><span class="el">showHideBySelect(</span><span class="at">'#q461746_q8'</span>, <span class="at">'#outer_461746_q30'</span>, <strong><span class="at">'1'</span></strong><span class="el">);</span> <span class="co">// <strong>Only</strong> option values "1" triggers showing <span class="el">'#outer_461746_q30'</span></span><br /><!--
+													--><span class="el">showHideBySelect(</span><span class="at">'#q461746_q8'</span>, <span class="at">'#outer_461746_q30'</span>, <strong><span class="at">['1', '3', '4']</span></strong><span class="el">);</span> <span class="co">// option values "1", "3" &amp; "4" all trigger showing <span class="el">'#outer_461746_q30'</span></span><br /><!--
+													--><span class="el">showHideByRadio(</span><span class="at">'input[name=q461746_q8]'</span>, <span class="at">'#outer_461746_q30'</span>, <strong><span class="at">'1'</span></strong><span class="el">);</span><br /><!--
+													--><span class="el">showHideByRadio(</span><span class="at">'input[name=q461746_q8]'</span>, <span class="at">'#outer_461746_q30'</span>, <strong><span class="at">['1', '3', '4']</span></strong><span class="el">);</span> <span class="co">// option values "1", "3" &amp; "4" all trigger showing <span class="el">'#outer_461746_q30'</span></span><!--
+												--></pre><!--
+											--></span>
+										</dd>
+										
+									<dt>hideVal</dt>
+										<dd>
+											the string value (or array/comma separated list of string values) to be matched to make HTML block <em>hidden</em>.<br />
+											(If FALSE, then visibility is toggled <em>off</em> by default)<br />
+											<strong>Note:</strong> each value must exactly match the value of an option in the select box.<br />
+											<!-- <strong>Note also:</strong> If you don't need to make the field(s) in the show/hide block required you don't need to include this -->
+										</dd>
+										<dd>
+											e.g. keep the block '#outer_461746_q30' visible unless #q461746_q8 field's value is <code>'1'</code>
+											<span class="code"><!--
+												--><pre class="hl"><!--
+													--><span class="el">showHideBySelect(</span><span class="at">'#q461746_q8'</span>, <span class="at">'#outer_461746_q30'</span>, <span class="at">false</span> <strong><span class="at">'1'</span></strong><span class="el">);</span><br /><!--
+													--><span class="el">showHideByRadio(</span><span class="at">'input[name=q461746_q8]'</span>, <span class="at">'#outer_461746_q30'</span>, <span class="at">false</span> <strong><span class="at">'1'</span></strong><span class="el">);</span><!--
+												--></pre><!--
+											--></span>
+										</dd>
+										
+									<dt>makeRequired</dt>
+										<dd>
+											If you want the field (or fields) in the show/hide block made required when visible, then make this <em>true</em>.<br />
+											<strong>Note:</strong> <em>true</em> and <em>false</em> are not wrapped in quotation marks.<br />
+											<strong>Note also:</strong> you must include <em>ALL</em> the preceding parameters
+										</dd>
+										<dd>
+											e.g. make all fields in block '#outer_461746_q30' required when the '#q461746_q8_1' field's value is '1'
+											<span class="code"><!--
+												--><pre class="hl"><!--
+													--><span class="el">showHideBySelect(</span><span class="at">'#q461746_q8'</span>, <span class="at">'#outer_461746_q30'</span>, <span class="at">'1'</span>, <span class="at">false</span>, <strong><span class="at">true</span></strong><span class="el">);</span><br /><!--
+													--><span class="el">showHideByRadio(</span><span class="at">'input[name=q461746_q8]'</span>, <span class="at">'#outer_461746_q30'</span>, <span class="at">'1'</span>, <span class="at">false</span>, <strong><span class="at">true</span></strong><span class="el">);</span><!--
+												--></pre><!--
+											--></span>
+										</dd>
+									
+										
+									<dt>focusID</dt>
+										<dd>
+											If your toggle field is immediately before the field you are showing, then you can force the cursor to the shown field by making the last parameter <em>true</em>.<br />
+											<strong>Note:</strong> <em>true</em> and <em>false</em> are not wrapped in quotation marks.<br />
+											<strong>Note also:</strong> you must include <em>ALL</em> the preceding parameters
+										</dd>
+										<dd>
+											e.g. put the cursor in the field '#q461746_q30' (if it's a texts field) or focus the user on the radio group, checkbox or select field when it is visible
+											<span class="code"><!--
+												--><pre class="hl"><!--
+													--><span class="el">showHideBySelect(</span><span class="at">'#q461746_q8'</span>, <span class="at">'#outer_461746_q30'</span>, <span class="at">'1'</span>, <span class="at">false</span>, <span class="at">true</span>, <strong><span class="at">#q461746_q30</span></strong><span class="el">);</span><br /><!--
+													--><span class="el">showHideByRadio(</span><span class="at">'input[name=q461746_q8]'</span>, <span class="at">'#outer_461746_q30'</span>, <span class="at">'1'</span>, <span class="at">false</span>, <span class="at">true</span>, <strong><span class="at">#q461746_q30</span></strong><span class="el">);</span><!--
+												--></pre><!--
+											--></span>
+										</dd>
+								</dl>
+								<label for="close1" class="close close1 close-top">close</label>
+								<label for="close1" class="close close1 close-bottom">close</label>
+							</article>
+
+							<input type="radio" name="accordionShowHide" id="showHideByMultiSelect" />
+							<label for="showHideByMultiSelect" class="btn">Show/Hide multiple blocks by select (or radio button)</label>
+							<article>
+
+									<h2 id="showHideByMultiSelect--head">Show/Hide multiple blocks by select (or radio button)</h2>
+
+									<p>There are times when you have a select field (or radio fields) and each option triggers different blocks to be shown/hidden. In this case we use <code>showHideByMultiSelect()</code> or <code>showHideMulitByRadio()</code></p>
+
+									<p><strong>NOTE:</strong> If you need to show/hide one block with a single select field (or group of radio buttons), it might be easier to use <label for="showHideBySelect" class="anchor-link-label">Show/Hide blocks based on question answers</label> instead.</p>
+	
+									<p class="code"><!--
+										--><pre class="hl"><!--
+											--><span class="el">showHideMulitBySelect(</span><span class="at">srcFieldID</span>, <span class="va">data</span>, <span class="va">hideAllOnEmpty</span><span class="el">);</span><br /><!--
+											--><span class="el">showHideMulitByRadio(</span><span class="at">srcParentID</span>, <span class="va">data</span>, <span class="va">hideAllOnEmpty</span><span class="el">);</span><!--
+										--></pre><!--
+									--></p>
+	
+									<h3>Parameter:</h3>
+									<dl>
+										<dt>srcFieldID (select only)</dt>
+											<dd>
+												ID of the select field to use as toggle. Or the <code>name</code> attribute of a group of radio buttons<br />
+												<strong>Note:</strong> an ID/name attribute must be prefixed with the hash character ("<strong>#</strong>")
+											</dd>
+											<dd>
+												e.g. select field with the ID '<strong><code>#q461746_q8</code></strong>'
+												<span class="code"><!--
+													--><pre class="hl"><!--
+														--><span class="el">showHideBySelect(</span>'<strong><span class="at">#q461746_q8</span></strong>', <span class="va">data</span>, <span class="va">true</span><span class="el">);</span><!--
+													--></pre><!--
+												--></span>
+											</dd>
+										<dt>srcParentID (radio button only)</dt>
+											<dd>
+												ID of the wrapper for the radio button fields to use as toggle<br />
+												<strong>Note:</strong> an ID/name attribute must be prefixed with the hash character ("<strong>#</strong>")
+											</dd>
+											<dd>
+												e.g. select field with the ID '<strong><code>#q461746_q8</code></strong>' or a radio field with the name attribute '<strong><code>#outer_q461746_q8</code></strong>'
+												<span class="code"><!--
+													--><pre class="hl"><!--
+														--><span class="el">showHideMulitByRadio(</span>'<strong><span class="at">#q461746_q8</span></strong>', <span class="va">data</span><span class="el">);</span><!--
+													--></pre><!--
+												--></span>
+										</dd>
+
+										<dt id="data">data</dt>
+											<dd>
+												A JSON object where each top level key represents an option value from the select field or group of radio buttons<br />
+												Each value <strong>must</strong> have an object with three keys: "<strong>show</strong>", "<strong>hide</strong>" &amp; "<strong>focusID</strong>" (optional)<br />
+												By default items listed in the "<strong>show</strong>" array do not have their child fields required. If you want the child fields to be required you put it in an array with the second item in the array being <code>TRUE</code> (see <code>optionValue1.show.["#selectorC", true]</code>)
+											</dd>
+											<dd class="extra-info">
+												<strong>Requirements:</strong>
+												<ol>
+													<li>You must have an entry for each non-empty value in the select (or radio button group)</li>
+													<li>Each entry <strong>must</strong> have a <code>show</code> and a <code>hide</code> property, each containing an array of selectors</li>
+													<li>Show items may be a simple string CSS selector or an array with the first item being the string CSS selector and the second item being either <code>true</code> or <code>false</code> to identify whether block's child fields should be made required.</li>
+													<li>Each entry may <em>(or may not)</em> have a <code>focusID</code> property</li>
+													<li>
+														<strong>All</strong> entries <strong>must</strong> have the same number of show/hide block IDs (or any CSS selector) spread across the <code>show</code> and <code>hide</code> properties<br />
+														Note how all entries list "<code>#selectorA</code>", "<code>#selectorB</code>", "<code>#selectorC</code>", "<code>#selectorD</code>", "<code>.selectorE</code>" &amp; "<code>#selectorF</code>" even though they might be alternately in "<strong>show</strong>" or "<strong>hide</strong>".<br />
+														<strong><em>Why do I need to specify the same selectors over and over again?</em></strong><br />
+														I was having issues working out which blocks needed to be shown (or hidden) for each option (or radio button) value. The most reliable way was to explicitly set which blocks should be shown and which should be hidden for each select option (or radio button) value
+													</li>
+													<li>"<strong>show</strong>", "<strong>hide</strong>" &amp; "<strong>focusID</strong>" selectors can be any valid CSS selector, but IDs work best</li>
+												</ol>
+												<strong>NOTE:</strong> The console in your browser's web developer tools will show comprehensive error and warning reporting.<br />
+												<strong>Make sure you check the console and fix all errors and warnings before you go live.</strong>
+											</dd>
+											<dd class="extra-info">
+												<strong>Sample:</strong>
+												<p>
+													<label for="showHideToggle">Show Hide toggle</label>
+													<select id="showHideToggle">
+														<option value=""> -- Please choose -- </option>
+														<option value="optionValue1">Option Value 1</option>
+														<option value="optionValue2">Option Value 2</option>
+														<option value="optionValue3">Option Value 3</option>
+													</select>
+												</p>  <span class="code"><!--
+												--><pre class="hl"><!--
+													--><span class="va">var</span> <span class="el">data</span> <span class="at">= {<br /><!--
+													-->	"</span><span class="el">optionValue1</span><span class="at">": {</span>	<span class="co">// The value to trigger is selected/checked</span><br /><!--
+													-->		<span class="at">"</span><span class="el">show<span class="at">": [</span>	<span class="co">// Blocks you wish to show when "<span class="el">optionValue1</span>" is selected/checked</span><br /><!--
+													-->			<span class="at">"</span><span class="va">#selectorA<span class="at">",</span>   <span class="co">// selectorA's (css selector) is a block that will be shown when "<span class="el">optionValue1</span>" is selected.</span><br />					<span class="co">// Its child fields are implicitly optional</span><br /><!--
+													-->			<span class="at">["</span><span class="va">#selectorB<span class="at">", </span><span class="va">false</span><span class="at">],</span> <span class="co">// selectorB's child fields are explicitly not required (optional)</span><br /><!--
+													-->			<span class="at">["</span><span class="va">#selectorC<span class="at">", </span><span class="va">true</span><span class="at">]</span> <span class="co">// selectorC's child fields are explicitly <strong>required</strong></span><br /><!--
+													-->		],<br /><!--
+													-->		"</span><span class="el">hide</span><span class="at">": [<br /><!--
+													-->			"</span><span class="va">#selectorD</span><span class="at">",</span> <span class="co">// the selectorD block will be hidden when "<span class="el">optionValue1</span>" is selected</span><br /><!--
+													-->			<span class="at">"</span><span class="va">.selectorE<span class="at">",<br /><!--
+													-->			"</span><span class="va">#selectorF<span class="at">"<br /><!--
+													-->		],<br /><!--
+													-->		"</span><span class="el">focusID</span><span class="at">": "</span><span class="va">#selectorA input[type=text]</span><span class="at">"</span> <span class="co">// The first time "<span class="el">optionValue1</span>" is selected,</span><br />							 <span class="co">// the cursor will automatically go to the field matching this ID</span><br /><!--
+													-->	<span class="at">}<br /><!--
+													-->	"</span><span class="el">optionValue2</span><span class="at">": {<br /><!--
+													-->		"</span><span class="el">show<span class="at">": [<br /><!--
+													-->			["</span><span class="va">#selectorA</span><span class="at">", </span><span class="va">true</span><span class="at">],<br /><!--
+													-->			"</span><span class="va">#selectorD</span><span class="at">",<br /><!--
+													-->			"</span><span class="va">.selectorE</span><span class="at">]<br /><!--
+													-->		],<br /><!--
+													-->		"</span><span class="el">hide</span><span class="at">": [<br /><!--
+													-->			"</span><span class="va">#selectorB</span><span class="at">",<br /><!--
+													-->			"</span><span class="va">#selectorC</span><span class="at">",<br /><!--
+													-->			"</span><span class="va">#selectorF<span class="at">"<br /><!--
+													-->		],</span><br /><!--
+													-->		<span class="co">// focusID is <strong>optional</strong>. If you don't need focus to be set the property can be omitted.</span><br /><!--
+													-->	<span class="at">}<br /><!--
+													-->	"</span><span class="el">optionValue3<span class="at">": {<br /><!--
+													-->		"</span><span class="el">show<span class="at">": [<br /><!--
+													-->			["</span><span class="va">.selectorE</span><span class="at">", </span><span class="va">true</span><span class="at">],<br /><!--
+													-->			"</span><span class="va">#selectorF</span><span class="at">]<br /><!--
+													-->		],<br /><!--
+													-->		"</span><span class="el">hide</span><span class="at">": [<br /><!--
+													-->			"</span><span class="va">#selectorA</span><span class="at">",<br /><!--
+													-->			"</span><span class="va">#selectorB</span><span class="at">",<br /><!--
+													-->			"</span><span class="va">#selectorC</span><span class="at">",<br /><!--
+													-->			"</span><span class="va">#selectorD</span><span class="at">"<br /><!--
+													-->		],<br /><!--
+													-->		"</span><span class="el">focusID</span><span class="at">": "</span><span class="va">.selectorE select</span><span class="at">"<br /><!--
+													-->	}<br /><!--
+													-->}</span><br /><!--
+													--><span class="el">showHideMulitBySelect(</span><span class="va">#showHideToggle</span>, <strong><span class="at">data</span></strong><span class="el">);</span><br /><!--
+													--><span class="el">showHideMulitByRadio(</span><span class="va">#showHideToggle</span>, <strong><span class="at">data</span></strong><span class="el">);</span><!--
+													--></pre><!--
+												--></span>
+											</dd>
+										<dt>hideAllOnEmpty</dt>
+											<dd>
+												Whether or not to hide all items if the select/radio has no default value set.
+											</dd>
+											<dd>
+												<code>TRUE</code>, <code>FALSE</code><br />
+												e.g. 
+												<span class="code"><!--
+												--><pre class="hl"><!--
+													--><span class="el">showHideMulitBySelect(</span>'<span class="va">#q461746_q8</span>', <span class="va">data</span>, <strong><span class="at">true</span></strong><span class="el">);<br /><!--
+													--><span class="el">showHideMulitByRadio(</span>'<span class="va">#q461746_q8</span>', <span class="va">data</span>, <strong><span class="at">true</span></strong><span class="el">);</span><!--
+												--></pre><!--
+											--></span>
+											</dd>
+								</dl>
+								<label for="close1" class="close close1 close-top">close</label>
+								<label for="close1" class="close close1 close-bottom">close</label>
+							</article>
+
+							<input type="radio" name="accordionShowHide" id="showHideByCheckbox" />
+							<label for="showHideByCheckbox" class="btn">Show/Hide by checkbox</label>
+							<article>
+								<h2 id="showHideByCheckbox--head">Show/Hide by checkbox</h2>
+								
+								<p>Use a checkbox question as the control/toggle to show or hide another part of the page.</p>
+								<p class="code"><pre class="hl"><span class="el">showHideByCheckbox(</span><span class="at">srcFieldID</span>, <span class="at">destID</span>, <span class="at">uncheckedHide</span>, <span class="at">makeRequired</span>, <span class="at">focusID</span><span class="el">);</span></pre></p>
+
+								<h3>Parameter:</h3>
+								<dl>
+									<dt>srcFieldID</dt>
+										<dd>
+											ID of the checkbox field to use as toggle.<br />
+											<strong>Note:</strong> an ID attribute must be prefixed with the hash character ("<strong>#</strong>")
+										</dd>
+										<dd>
+											e.g. checkbox field with the ID '<strong><code>#q461746_q8_1</code></strong>'
+											<span class="code"><pre class="hl"><span class="el">showHideByCheckbox(</span><strong><span class="at">'#q461746_q8</span></strong>', <span class="at">'#outer_461746_q30'</span><span class="el">);</span></pre></span>
+										</dd>
+
+									<dt>destID</dt>
+										<dd>
+											ID of the block of HTML that is to be shown/hidden.<br />
+											<strong>Note:</strong> an ID must be prefixed with the hash character ("<strong>#</strong>")
+										</dd>
+										<dd>
+											e.g. the HTML block whose wrapper has the ID: <strong><code>#outer_461746_q30</code></strong>
+											<span class="code"><pre class="hl"><span class="el">showHideByCheckbox(</span><span class="at">'#q461746_q8'</span>, <strong><span class="at">'#outer_461746_q30'</span></strong><span class="el">);</span></pre></span>
+										</dd>
+											
+									<dt>uncheckedHide</dt>
+										<dd>
+											the string value (or array/comma separated list of string values) to be matched to make HTML block <em>visible</em>.<br />
+											(If FALSE, then visibility is toggled <em>on</em> by default)<br />
+											<strong>Note:</strong> each value must exactly match the value of an option in the select box.
+										</dd>
+										<dd>
+											e.g. show the block '#outer_461746_q30' only if the field '#q461746_q8' is <em>NOT</em> checked
+											<span class="code"><pre class="hl"><span class="el">showHideByCheckbox(</span><span class="at">'#q461746_q8'</span>, <span class="at">'#outer_461746_q30'</span>, <strong><span class="at">false</span></strong><span class="el">);</span></pre></span>
+										</dd>
+										
+									<dt>makeRequired</dt>
+										<dd>
+											If you want the field (or fields) in the show/hide block made required when visible, then make this <em>true</em>.<br />
+											<strong>Note:</strong> <em>true</em> and <em>false</em> are not wrapped in quotation marks.<br />
+											<strong>Note also:</strong> you must include <em>ALL</em> the preceding parameters
+										</dd>
+										<dd>
+											e.g. make all fields in block '#outer_461746_q30' required when the '#q461746_q8' field's value is '1'
+											<span class="code"><pre class="hl"><span class="el">showHideByCheckbox(</span><span class="at">'#q461746_q8'</span>, <span class="at">'#outer_461746_q30'</span>, <span class="at">true</span>, <strong><span class="at">true</span></strong><span class="el">);</span></pre></span>
+										</dd>
+									
+										
+									<dt>focusID</dt>
+										<dd>
+											If your toggle field is immediately before the field you are showing, then you can force the cursor to the shown field by making the last parameter <em>true</em>.<br />
+											<strong>Note:</strong> <em>true</em> and <em>false</em> are not wrapped in quotation marks.<br />
+											<strong>Note also:</strong> you must include <em>ALL</em> the preceding parameters
+										</dd>
+										<dd>
+											e.g. put the cursor in the field '#q461746_q30' (if it's a texts field) or focus the user on the radio group, checkbox or select field when it is visible
+											<span class="code"><pre class="hl"><span class="el">showHideByCheckbox(</span><span class="at">'#q461746_q8'</span>, <span class="at">'#outer_461746_q30'</span>, <span class="at">true</span>, <span class="at">true</span>, <strong><span class="at">#q461746_q30</span></strong><span class="el">);</span></pre></span>
+										</dd>
+								</dl>
+								<label for="close1" class="close close1 close-top">close</label>
+								<label for="close1" class="close close1 close-bottom">close</label>
+							</article>
+
+							<input type="radio" name="accordionShowHide" id="showHideByText" />
+							<label for="showHideByText" class="btn">Show/Hide by non-empty text field</label>
+							<article>
+
+
+								<h2 id="showHideByText--head">Show/Hide by non-empty text field</h2>
+								
+								<p>Say you have a group of free text fields but you don't want to scare the user by presenting 10 fields at once. <code>showHideByTextNotempty()</code> allows you to only show a block based on whether a textbox is empty or not.</p>
+
+								<p class="code"><pre class="hl"><span class="el">showHideByTextNotempty(</span><span class="at">srcFieldID</span>, <span class="at">destID</span>, <span class="at">makeRequired</span>, <span class="at">focusID</span>, <span class="at">usePattern</span><span class="el">);</span></pre></p>
+
+								<h3>Parameter:</h3>
+								<dl>
+									<dt>srcFieldID</dt>
+										<dd>
+											ID of the text input field to use as toggle.<br />
+											<strong>Note:</strong> an ID attribute must be prefixed with the hash character ("<strong>#</strong>")
+										</dd>
+										<dd>
+											e.g. text input field with the ID '<strong><code>#q461746_q8</code></strong>'
+											<span class="code"><pre class="hl"><span class="el">showHideByTextNotempty(</span><strong><span class="at">'#q461746_q8</span></strong>', <span class="at">'#outer_461746_q30'</span><span class="el">);</span></pre></span>
+										</dd>
+
+									<dt>destID</dt>
+										<dd>
+											ID of the block of HTML that is to be shown/hidden.<br />
+											<strong>Note:</strong> an ID must be prefixed with the hash character ("<strong>#</strong>")
+										</dd>
+										<dd>
+											e.g. the HTML block whose wrapper has the ID: <strong><code>#outer_461746_q30</code></strong>
+											<span class="code"><pre class="hl"><span class="el">showHideByCheckbox(</span><span class="at">'#q461746_q8'</span>, <strong><span class="at">'#outer_461746_q30'</span></strong><span class="el">);</span></pre></span>
+										</dd>
+										
+									<dt>makeRequired</dt>
+										<dd>
+											If you want the field (or fields) in the show/hide block made required when visible, then make this <em>true</em>.<br />
+											<strong>Note:</strong> <em>true</em> and <em>false</em> are not wrapped in quotation marks.
+										</dd>
+										<dd>
+											e.g. make all fields in block '#outer_461746_q30' required when the '#q461746_q8_1' field's value is '1'
+											<span class="code"><pre class="hl"><span class="el">showHideByTextNotempty(</span><span class="at">'#q461746_q8'</span>, <span class="at">'#outer_461746_q30'</span>, <strong><span class="at">true</span></strong><span class="el">);</span></pre></span>
+										</dd>
+									
+										
+									<dt>focusID</dt>
+										<dd>
+											If your toggle field is immediately before the field you are showing, then you can force the cursor to the shown field by making the last parameter <em>true</em>.<br />
+											<strong>Note:</strong> <em>true</em> and <em>false</em> are not wrapped in quotation marks.<br />
+											<strong>Note also:</strong> you must include <em>ALL</em> the preceding parameters
+										</dd>
+										<dd>
+											e.g. put the cursor in the field '#q461746_q30' (if it's a texts field) or focus the user on the radio group, checkbox or select field when it is visible
+											<span class="code"><pre class="hl"><span class="el">showHideByTextNotempty(</span><span class="at">'#q461746_q8'</span>, <span class="at">'#outer_461746_q30'</span>, <span class="at">true</span>, <strong><span class="at">#q461746_q30</span></strong><span class="el">);</span></pre></span>
+										</dd>
+										
+									<dt>usePattern</dt>
+										<dd>
+											if TRUE, and the text field has a pattern attribute, then consider the text field empty if the value doesn't match the pattern (regular expression).
+										</dd>
+										<dd>
+											e.g. Only make '#outer_461746_q30' visible if '#q461746_q8' is not empty <strong><emp>AND</emp></strong> and the value matches the pattern of the text field.
+											<span class="code"><pre class="hl"><span class="el">showHideByTextNotempty(</span><span class="at">'#q461746_q8'</span>, <span class="at">'#outer_461746_q30'</span>, <span class="at">true</span>, <strong><span class="at">#q461746_q30</span>, <span class="at">true</span></strong><span class="el">);</span></pre></span>
+										</dd>
+								</dl>
+								<label for="close1" class="close close1 close-top">close</label>
+								<label for="close1" class="close close1 close-bottom">close</label>
+							</article>
+
+							<input type="radio" name="accordionShowHide" id="showHideByAuto" />
+							<label for="showHideByAuto" class="btn">Automatically hide blocks when the page loads</label>
+							<article>
+								<h2 id="showHideByAuto--head">Automatically hide blocks when the page loads</h2>
+								<p>There is now no need to do anything to make the show/hide block preset to hidden/visible when the page loads. However, if you are doing stuff to the form after the page has already loaded, you may need to call <code>showHideByDoAutoTrigger()</code> after you've done what you need. But test first. It shouldn't be necessary.</p>
+								<label for="close1" class="close close1 close-top">close</label>
+								<label for="close1" class="close close1 close-bottom">close</label>
+							</article>
+							<label for="close0" class="close close0 close-top">close</label>
+							<label for="close0" class="close close0 close-bottom">close</label>
+						</section>
+					</li>
+				</ul>
+				<label for="modal" class="btn">Close</label>
+			</section>
+		<!-- </div> -->
+		<script type="text/ecmascript" src="js/matrix_form_HTML_generator.js"></script>
+	</body>
+</html>

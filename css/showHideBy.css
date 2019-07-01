@@ -1,0 +1,25 @@
+.top-down {
+  // position: relative;
+  overflow: hidden;
+  transition: max-height 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.top-down.slide-up {
+  border: none !important;
+  // display: none;
+  max-height: 0px;
+  padding: 0 !important;
+}
+.top-down.slide-up > legend {
+    opacity: 0;
+    transform: scaleY(0);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+.top-down.slide-down {
+  // display: block;
+  max-height: 100em;
+}
+.top-down.slide-down > legend {
+  opacity: 1;
+  transform: scaleY(1);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
